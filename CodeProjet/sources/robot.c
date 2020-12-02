@@ -121,7 +121,9 @@ unsigned char bordAtteint() {
 * Rôle : arrêter le robot et le faire clignoter en rouge lent                                                                   
 ******************************************************************************/
 void terminerSurBatterieDechargee() {
-    
+    while(1){
+        clignoterRouge(1000);
+    }      
 }
 
 

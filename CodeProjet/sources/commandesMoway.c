@@ -113,7 +113,8 @@ float calculerAccelerationVerticale() {
 *Paramètre d'entrée : durée de la pause en millisecondes  
 ********************************************************/
 void clignoterRouge(unsigned char demiPeriodeMillisecondes) {
-    
+    LED_TOP_RED_ON_OFF();
+    attendre(demiPeriodeMillisecondes);
 }
 
 
