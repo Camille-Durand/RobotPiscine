@@ -59,10 +59,12 @@ void explorerPiscine(TRobot* robot) {
    
     while(1) {
         
-        if(robotRetourne() == 1) {
+        if(robotRetourne() == 1) 
+        {
             attendreImmersion();
         }
-        if(parcoursTermine(robot) == 1) {
+        if(parcoursTermine(robot) == 1) 
+        {
             terminerParcours();
         }
         
