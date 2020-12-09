@@ -34,8 +34,14 @@ void initialiserRobot(TRobot* robot)
 *Valeur de retour :   1 si batterie insuffisante, 0 s'il y a assez de batterie                               
 ******************************************************************************/
 unsigned char chargeInsuffisante(TRobot* robot) {
-    
-    return 1;
+    if (lireBatterie < 20)
+    {
+        return 1;
+    }
+    else 
+    {
+        return 0;
+    }
 }
 
 
@@ -121,9 +127,7 @@ unsigned char bordAtteint() {
 * Rôle : arrêter le robot et le faire clignoter en rouge lent                                                                   
 ******************************************************************************/
 void terminerSurBatterieDechargee() {
-    while(1){
-        clignoterRouge(1000);
-    }      
+    
 }
 
 

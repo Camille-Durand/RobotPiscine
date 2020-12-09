@@ -27,14 +27,15 @@ void configurerMoway() {
     SEN_CONFIG();
 }
 
-
 /********************************************************
 *Nom : lireBatterie                                    
 *Rôle : récupère le pourcentage de batterie           
 *Valeur de retour :   pourcentage de batterie restant  
 ********************************************************/
 unsigned char lireBatterie() {
-  return 100;  
+    lireBatterie() = SEN_BATTERY;
+    TRobot->niveauBatterie = lireBatterie();
+    return TRobot->niveauBatterie;
 }
 
 
@@ -113,8 +114,7 @@ float calculerAccelerationVerticale() {
 *Paramètre d'entrée : durée de la pause en millisecondes  
 ********************************************************/
 void clignoterRouge(unsigned char demiPeriodeMillisecondes) {
-    LED_TOP_RED_ON_OFF();
-    attendre(demiPeriodeMillisecondes);
+    
 }
 
 

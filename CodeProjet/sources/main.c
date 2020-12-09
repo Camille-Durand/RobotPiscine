@@ -19,8 +19,5 @@ void _reset (void) {
 void main() {
     TRobot robot;
     initialiserRobot(&robot); 
-        
-       
-	
     
 }
