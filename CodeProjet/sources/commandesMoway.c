@@ -45,7 +45,8 @@ unsigned char lireBatterie() {
 *    millisecondes : durée de la pause en millisecondes*
 ********************************************************/
 void attendre(unsigned char millisecondes) { // Au moins 10ms
-    if(millisecondes < 1) {
+    if(millisecondes < 1) 
+    {
         millisecondes = 1;
     }
     Delay1KTCYx(millisecondes);
@@ -57,7 +58,8 @@ void attendre(unsigned char millisecondes) { // Au moins 10ms
 * Rôle : fait avancer le robot tout droit 
 ********************************************************/
 void avancer() {
-	
+	MOT_STR(100,FWD,DISTANCE,100);
+    return 0;	
 }
 
 
@@ -75,7 +77,8 @@ void reculer() {
 * Rôle : arrêter tous les mouvements du robot          
 ********************************************************/
 void arreterRobot() {
-	
+	MOT_STOP();
+    return 0;	
 }
 
 
@@ -154,7 +157,7 @@ void faireDemiTour(void)
 * Valeur de retour :  1 si ligne nore détectée, 0 sinon                                                   
 *********************************************************/
 unsigned char lireCapteurLigneGauche() {
-    
+    SEN_CHECK_LINE_L;    
     return 0;
 }
 
@@ -165,6 +168,6 @@ unsigned char lireCapteurLigneGauche() {
 * Valeur de retour :  1 si ligne nore détectée, 0 sinon                                                    
 *********************************************************/
 unsigned char lireCapteurLigneDroit() {
-    
+    SEN_CHECK_LINE_R;    
     return 0;
 }
